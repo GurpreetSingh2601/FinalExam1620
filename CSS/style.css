@@ -7,3 +7,9 @@
 h1 {
     font-family: 'Indie Flower', sans-serif;
 }
+body {
+    background-color: #c4a7e7;
+    margin: auto;
+    text-align: center;
+    width: 100%;
+}
