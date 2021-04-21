@@ -15,6 +15,7 @@ body {
 }
 .album1 {
     grid-area: album1;
+    padding: 10px;
 }
 
 .album2 {
@@ -66,7 +67,7 @@ body {
 }
 
 .cart-image {
-    grid-area: cartimage;
+    grid-area: image;
 }
 
 .cart-image>img {
@@ -74,11 +75,11 @@ body {
 }
 
 .cart-name {
-    grid-area: cartname;
+    grid-area: name;
 }
 
 .cart-price {
-    grid-area: cartprice;
+    grid-area: price;
 }
 
 ul {
@@ -92,6 +93,7 @@ a {
 a:visited {
     color: initial;
 }
+
 
 ul>li:hover, ul>li>a:hover {
     text-decoration: underline;

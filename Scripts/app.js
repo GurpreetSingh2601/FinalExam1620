@@ -11,5 +11,67 @@ function getAlbumName(name) {
         }
     }
 
-    return "Album name not defined.";
+    return undefined;
+}
+let SHOP_ITEMS = null;
+let SHOP_ITEM_IMAGES = null;
+let CART = null;
+
+function OnAlbumClick(item) {
+    clicked_album_name = item.childNodes[1].textContent;
+    album = getAlbumName(clicked_album_name);
+
+    if (album == undefined) {
+        return;
+    }
+
+    if (album.inCart) {
+        alert('That album is already in your cart!')
+        return;
+    }
+
+    album.inCart = true;
+
+    reloadCart();
+}
+
+function reloadCart() {
+
+    CART.innerHTML = '';
+
+    for (const album of ALBUMS) {
+        if (!album.inCart) {
+            continue;
+        }
+
+        const photo_name = (album.name).replace(' ', '');
+
+        let html = `
+            <div class="cart-row">
+                <span class="cart-image"><img src="Images/${photo_name}.png"></img></span>
+                <span class="cart-name">${album.name}</span>
+                <span class="cart-price">$${album.price}</span>
+            </div>
+        `;
+
+        CART.innerHTML += html;
+    }
+}
+
+window.onload = () => {
+
+    SHOP_ITEMS = document.querySelectorAll('.shop-item');
+    SHOP_ITEMS.forEach(item => {
+        item.addEventListener('click', () => OnAlbumClick(item));
+    });
+
+    SHOP_ITEM_IMAGES = document.querySelectorAll('.shop-item-image');
+    SHOP_ITEM_IMAGES.forEach(item => {
+        photo_name = (item.id).replace(' ', '');
+        item.src = `Images/${photo_name}.png`;
+    });
+
+    CART = document.getElementById('cart-items');
+
+    reloadCart();
 }
