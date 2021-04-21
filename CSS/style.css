@@ -45,7 +45,7 @@ body {
         margin: 0 10px;
     }
     .shop-items {
-        grid-template-columns: 100px 441px 100px;
+        grid-template-columns: 100px 400px 100px;
         grid-template-areas: ". album1 . . album2" ". album3 . . album4"
     }
 }
@@ -53,12 +53,12 @@ body {
 
 .cart {
     background-color: #d4d1ec;
-    padding-bottom: 20px;
+    padding-bottom: 15px;
 }
 
 .cart-headers {
     text-decoration: underline;
-    padding-bottom: 10px;
+    padding-bottom: 12px;
 }
 
 .cart-row {

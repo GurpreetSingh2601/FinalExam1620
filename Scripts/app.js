@@ -35,7 +35,7 @@ function OnAlbumClick(item) {
     reloadCart();
 }
 
-function reloadCart() {
+function refreshcart() {
 
     CART.innerHTML = '';
 
@@ -73,5 +73,5 @@ window.onload = () => {
 
     CART = document.getElementById('cart-items');
 
-    reloadCart();
+    refreshcart();
 }
