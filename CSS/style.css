@@ -13,3 +13,18 @@ body {
     text-align: center;
     width: 100%;
 }
+.album1 {
+    grid-area: album1;
+}
+
+.album2 {
+    grid-area: album2;
+}
+
+.album3 {
+    grid-area: album3;
+}
+
+.album4 {
+    grid-area: album4;
+}
