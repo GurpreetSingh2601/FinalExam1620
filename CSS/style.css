@@ -28,3 +28,81 @@ body {
 .album4 {
     grid-area: album4;
 }
+
+.shop-items {
+    display: grid;
+    grid-template-columns: 50fr 540fr 50fr;
+    grid-template-areas: ". album1 ." ". album2 ." ". album3 ." ". album4 ."
+}
+.shop-item>span {
+    display: block;
+}
+
+@media only screen and (min-width: 640px) {
+    .nav>ul>li {
+        display: inline;
+        margin: 0 10px;
+    }
+    .shop-items {
+        grid-template-columns: 100px 441px 100px;
+        grid-template-areas: ". album1 . . album2" ". album3 . . album4"
+    }
+}
+
+
+.cart {
+    background-color: #d4d1ec;
+    padding-bottom: 20px;
+}
+
+.cart-headers {
+    text-decoration: underline;
+    padding-bottom: 10px;
+}
+
+.cart-row {
+    display: grid;
+    grid-template-areas: ". cartimage . cartname . cartprice .";
+}
+
+.cart-image {
+    grid-area: cartimage;
+}
+
+.cart-image>img {
+    width: 100px;
+}
+
+.cart-name {
+    grid-area: cartname;
+}
+
+.cart-price {
+    grid-area: cartprice;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: initial;
+}
+
+ul>li:hover, ul>li>a:hover {
+    text-decoration: underline;
+    color: #71669b;
+}
+
+.band-name {
+    background-color: #66c3e7;
+    color: #ffffff;
+}
+
+.section-header {
+    color: #0622a1;
+}
